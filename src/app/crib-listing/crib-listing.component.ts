@@ -25,6 +25,7 @@ export class CribListingComponent implements OnInit {
     //   data => this.cribs = data,
     //   error => this.error = error.statusText
     // );
+    // this is done in cribs.service.ts file
 
     this.cribsService.getAllCribs()
       .subscribe(

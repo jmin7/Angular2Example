@@ -6,12 +6,13 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CribsService {
 
-  constructor(
-     private http: Http
-  ) { }
+  constructor(private http: Http) { }
 
   getAllCribs() {
     return this.http.get('data/cribs.json')
     .map(res => res.json())
   }
 }
+
+// Advantage for using service : 
+// service allows to reuse this logic, use this logic across whole app/ multiple places

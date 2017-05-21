@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { cribs } from './../data/cribs';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-crib-listing',
@@ -8,11 +8,12 @@ import { cribs } from './../data/cribs';
 })
 export class CribListingComponent implements OnInit {
 
-  cribs: Array<any> = cribs;
+  cribs: Array<any>;
 
   constructor() { }
 
   ngOnInit() {
+  // make an http request
   }
 
 }

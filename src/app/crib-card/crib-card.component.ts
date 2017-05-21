@@ -14,7 +14,6 @@ export class CribCardComponent implements OnInit {
 
   ngOnInit() {
     let bedrooms = this.crib.bedrooms;
-    let kitchen = this.crib.kitchens;
   }
 
 }

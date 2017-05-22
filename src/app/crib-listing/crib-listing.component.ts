@@ -35,7 +35,7 @@ export class CribListingComponent implements OnInit {
 
     this.cribsService.newCribSubject.subscribe(
       data => this.cribs = [data, ...this.cribs]
-    );
+    )
   }
 
 }

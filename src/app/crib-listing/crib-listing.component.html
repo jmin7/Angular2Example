@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div *ngFor="let crib of cribs">
+  <div *ngFor="let crib of cribs | sortBy: [sortField]">
     <app-crib-card [crib]="crib" class="col-sm-3"></app-crib-card>
   </div>
 

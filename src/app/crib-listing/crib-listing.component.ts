@@ -15,7 +15,7 @@ export class CribListingComponent implements OnInit {
   constructor(
     private http: Http,
     private cribsService: CribsService
-    ) { } // can inject somthing here
+    ) {  } // can inject somthing in the curly bracket
 
   ngOnInit() {
     // this.http.get('data/cribs.json')     // put http address in between ' '
@@ -31,6 +31,10 @@ export class CribListingComponent implements OnInit {
       data => this.cribs = data,
       error => this.error = error.statusText
     );
+
+    this.cribsService.newCribSubject.subscribe(
+      data => this.cribs.push(data)
+    )
   }
 
 }

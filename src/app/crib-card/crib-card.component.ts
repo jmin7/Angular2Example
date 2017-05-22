@@ -13,7 +13,6 @@ export class CribCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let bedrooms = this.crib.bedrooms;
   }
 
 }

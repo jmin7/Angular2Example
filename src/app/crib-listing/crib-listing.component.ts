@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { CribsService } from './../services/cribs.service';
+import { Crib } from './../crib';
 
 @Component({
   selector: 'app-crib-listing',
@@ -9,7 +10,7 @@ import { CribsService } from './../services/cribs.service';
 })
 export class CribListingComponent implements OnInit {
 
-  cribs: Array<any>;
+  cribs: Array<Crib>;
   error: string;
 
   constructor(
@@ -28,13 +29,13 @@ export class CribListingComponent implements OnInit {
 
     this.cribsService.getAllCribs()
       .subscribe(
-      data => this.cribs = data,
-      error => this.error = error.statusText
+        data => this.cribs = data,
+        error => this.error = error.statusText
     );
 
     this.cribsService.newCribSubject.subscribe(
-      data => this.cribs.push(data)
-    )
+      data => this.cribs = [data, ...this.cribs]
+    );
   }
 
 }

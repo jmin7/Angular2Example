@@ -7,11 +7,12 @@ import 'rxjs/add/operator/map';
 export class CribsService {
 
   public newCribSubject = new Subject<any>();
+
   constructor(private http: Http) { }
 
   getAllCribs() {
     return this.http.get('data/cribs.json')
-    .map(res => res.json())
+    .map(res => res.json());
   }
 
   addCrib(data) {

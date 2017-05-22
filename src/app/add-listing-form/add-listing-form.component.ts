@@ -15,7 +15,7 @@ export class AddListingFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onCribSubmit(data): void {
+  onCribSubmit(data) {
     this.cribsService.addCrib(data);
   }
 }

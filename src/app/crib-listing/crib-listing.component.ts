@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { CribsService } from './../services/cribs.service';
-import { Crib } from './../crib';
+import { UtilService } from './../services/util.service';
 
 @Component({
   selector: 'app-crib-listing',
@@ -10,12 +10,22 @@ import { Crib } from './../crib';
 })
 export class CribListingComponent implements OnInit {
 
-  cribs: Array<Crib>;
+  cribs: Array<any>;
   error: string;
+  sortFields: Array<string> = [
+    'address',
+    'area',
+    'bathrooms',
+    'bedrooms',
+    'price',
+    'type'
+  ];
 
   constructor(
     private http: Http,
-    private cribsService: CribsService
+    private cribsService: CribsService,
+    private utilService: UtilService
+
     ) {  } // can inject somthing in the curly bracket
 
   ngOnInit() {

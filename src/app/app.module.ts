@@ -6,9 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CribListingComponent } from './crib-listing/crib-listing.component';
 import { CribCardComponent } from './crib-card/crib-card.component';
-import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
 
 import { CribsService } from './services/cribs.service';
+import { UtilService } from './services/util.service';
+import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { CribsService } from './services/cribs.service';
     FormsModule,
     HttpModule
   ],
-  providers: [CribsService],
+  providers: [CribsService, UtilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,7 +13,7 @@
             <option
              *ngFor="let field of sortFields"
              [value]="field">
-              <!--{{ utilService.capitalize(field) }}-->
+              {{ utilService.capitalize(field) }}
              </option>
           </select>
         </div>
@@ -22,7 +22,7 @@
   </div>
 
   <div *ngFor="let crib of cribs">
-    <app-crib-card [crib]="crib" class="col-sm-4"></app-crib-card>
+    <app-crib-card [crib]="crib" class="col-sm-3"></app-crib-card>
   </div>
 
 </div>

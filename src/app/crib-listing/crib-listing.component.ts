@@ -12,6 +12,9 @@ export class CribListingComponent implements OnInit {
 
   cribs: Array<any>;
   error: string;
+  sortField: string = 'price';
+  sortDirection: string = 'asc';  
+  // default sorting filed is price and sorting direction is asc
   sortFields: Array<string> = [
     'address',
     'area',

@@ -22,7 +22,7 @@ export class CribListingComponent implements OnInit {
     'bedrooms',
     'price',
     'type'
-  ];
+    ];
 
   constructor(
     private http: Http,
